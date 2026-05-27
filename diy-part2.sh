@@ -29,6 +29,10 @@ cp -rf kenzok8-packages/adguardhome package/adguardhome
 cp -rf kenzok8-packages/luci-app-adguardhome package/luci-app-adguardhome
 rm -rf kenzok8-packages
 
+git clone --depth=1 https://github.com/vernesong/OpenClash.git OpenClash-packages
+cp -rf OpenClash-packages/luci-app-openclash package/luci-app-openclash
+rm -rf OpenClash-packages
+
 
 #git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 #git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
