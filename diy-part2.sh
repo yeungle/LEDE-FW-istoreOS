@@ -27,17 +27,42 @@ cp -rf kenzok8-packages/wrtbwmon package/wrtbwmon
 cp -rf kenzok8-packages/luci-app-wrtbwmon package/luci-app-wrtbwmon
 cp -rf kenzok8-packages/adguardhome package/adguardhome
 cp -rf kenzok8-packages/luci-app-adguardhome package/luci-app-adguardhome
+cp -rf kenzok8-packages/luci-app-eqos package/luci-app-eqos
+cp -rf kenzok8-packages/luci-app-systools package/luci-app-systools
+cp -rf kenzok8-packages/luci-lib-iform package/luci-lib-iform
+cp -rf kenzok8-packages/speedtestcli package/speedtestcli
+cp -rf kenzok8-packages/fastnet package/fastnet
+cp -rf kenzok8-packages/luci-app-fastnet package/luci-app-fastnet
 rm -rf kenzok8-packages
 
 git clone --depth=1 https://github.com/vernesong/OpenClash.git OpenClash-packages
 cp -rf OpenClash-packages/luci-app-openclash package/luci-app-openclash
 rm -rf OpenClash-packages
 
+git clone --depth=1 https://github.com/destan19/OpenAppFilter.git OpenAppFilter
+cp -rf OpenAppFilter/luci-app-oaf package/luci-app-oaf
+cp -rf OpenAppFilter/oaf package/oaf
+cp -rf OpenAppFilter/open-app-filter package/open-app-filter
+rm -rf OpenAppFilter
 
-#git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
-#git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+git clone --depth=1 https://github.com/linkease/nas-packages.git nas-packages
+cp -rf nas-packages/network/services/quickstart package/quickstart
+cp -rf nas-packages/network/services/floatip package/floatip
+cp -rf nas-packages/network/services/linkease package/linkease
+cp -rf nas-packages/network/services/linkmount package/linkmount
+cp -rf nas-packages/network/services/ddnsto package/ddnsto
+rm -rf nas-packages
 
-#./scripts/feeds update -a
-#./scripts/feeds install -a
+git clone --depth=1 https://github.com/linkease/nas-packages-luci.git nas-packages-luci
+cp -rf nas-packages-luci/luci/luci-app-quickstart package/luci-app-quickstart
+cp -rf nas-packages-luci/luci/luci-app-floatip package/luci-app-floatip
+cp -rf nas-packages-luci/luci/luci-app-linkease package/luci-app-linkease
+cp -rf nas-packages-luci/luci/luci-app-ddnsto package/luci-app-ddnsto
+rm -rf nas-packages-luci
+
+git clone --depth=1 https://github.com/xiangfeidexiaohuo/extra-ipk.git extra-ipk
+cp -rf extra-ipk/op-homebox/homebox package/homebox
+cp -rf extra-ipk/op-homebox/luci-app-homebox package/luci-app-homebox
+rm -rf extra-ipk
 
 
